@@ -1,0 +1,45 @@
+<footer class="footer surface-card py-4 text-center shadow-1">
+  <div
+    class="container flex flex-column align-items-center justify-content-center gap-3"
+  >
+    <p class="text-gray-600 m-0">
+      © {{ year }} <strong>Mahmoud Hussen</strong> — Made with
+      <span class="text-red-500"></span> using <strong>Angular</strong>
+    </p>
+
+    <div class="flex gap-4 text-primary text-xl">
+      <a
+        href="https://www.linkedin.com/in/mahmoud-hussen-bb9895329"
+        target="_blank"
+        aria-label="LinkedIn"
+      >
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a
+        href="https://www.facebook.com/share/1MGiGjcCc1/"
+        target="_blank"
+        aria-label="facebook"
+      >
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a
+        href="https://www.instagram.com/ma7moud_hussen1?igsh=MXRhN2p5MWZia2drag=="
+        target="_blank"
+        aria-label="Email"
+      >
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- زرار Back to Top -->
+@if (showButton) {
+<button
+  (click)="scrollToTop()"
+  class="back-to-top fade-in p-button p-component p-button-rounded p-button-lg bg-primary text-white"
+  aria-label="Back to Top"
+>
+  <i class="fas fa-arrow-up"></i>
+</button>
+}

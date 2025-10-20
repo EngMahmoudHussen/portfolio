@@ -1,0 +1,31 @@
+.courses-container {
+  padding: 4rem 2rem;
+}
+
+.course-card {
+  height: 100%;
+  min-height: 420px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+a.p-button {
+  text-decoration: none;
+  align-self: center;
+  margin-top: auto;
+}
+
+
+.course-card h3 {
+  min-height: 60px;
+}
+
+.course-card p {
+  line-height: 1.5;
+}

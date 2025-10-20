@@ -1,0 +1,42 @@
+<div class="projects-container surface-0 p-6">
+  <h2 class="text-3xl font-bold text-primary text-center mb-6">
+    Featured Projects
+  </h2>
+
+  <div class="projects-grid">
+    @for (project of projects; track $index) {
+    <div class="project-card shadow-3 border-round-lg surface-card">
+      <div class="project-image">
+        <img [src]="project.image" [alt]="project.title" />
+      </div>
+
+      <div
+        class="project-content p-3 flex flex-column justify-content-between h-full"
+      >
+        <div>
+          <h3 class="text-xl font-semibold text-primary mb-2">
+            {{ project.title }}
+          </h3>
+          <p class="text-gray-700 text-sm mb-3">{{ project.description }}</p>
+        </div>
+
+        <div class="tech-stack mb-3">
+          @for (tech of project.tech; track $index) {
+          <span class="tech-badge p-tag p-tag-rounded mr-2 mb-2">
+            {{ tech }}
+          </span>
+          }
+        </div>
+
+        <a
+          [href]="project.link"
+          target="_blank"
+          class="p-button p-button-sm p-button-outlined p-button-primary w-full"
+        >
+          View Project
+        </a>
+      </div>
+    </div>
+    }
+  </div>
+</div>

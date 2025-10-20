@@ -1,0 +1,30 @@
+<div class="achievements-container surface-0 py-6">
+  <h2 class="text-3xl font-bold text-primary text-center mb-6">
+    Achievements & Certifications
+  </h2>
+
+  <div class="grid justify-content-center">
+    @for (ach of achievements; track $index) {
+    <div class="col-12 md:col-4">
+      <div
+        class="achievement-card border-round-lg surface-card shadow-2 p-5 text-center flex flex-column align-items-center justify-content-center"
+      >
+        <i
+          class="{{ ach.icon }}"
+          [ngStyle]="{ color: '#0d6efd', fontSize: '2.5rem' }"
+        ></i>
+
+        <h4 class="text-lg font-semibold mt-3 mb-2">{{ ach.title }}</h4>
+        <p class="text-gray-600 text-sm mb-3">{{ ach.description }}</p>
+
+        <a
+          [href]="ach.link"
+          target="_blank"
+          class="p-button p-component p-button-rounded p-button-outlined text-primary border-primary"
+          >{{ ach.linkText }}</a
+        >
+      </div>
+    </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="courses-container surface-0 p-6">
+  <h2 class="text-3xl font-bold text-primary text-center mb-5">
+    Courses & Certifications
+  </h2>
+
+  <div class="grid">
+    @for (course of courses; track $index) {
+      <div class="col-12 md:col-6">
+        <div class="p-4 border-round-lg surface-card shadow-1 mb-4 course-card">
+          <h3 class="text-xl font-semibold mb-2 text-primary">
+            {{ course.name }}
+          </h3>
+          <p class="text-color-secondary mb-1">
+            {{ course.place }} • {{ course.time }}
+          </p>
+          <p class="text-gray-700 text-sm mb-3">{{ course.details }}</p>
+
+          @if (course.certificate) {
+            <div class="text-center mt-3">
+              <a
+                [href]="course.certificate"
+                target="_blank"
+                class="p-button p-button-outlined p-button-primary text-sm px-4 py-2 inline-flex align-items-center justify-content-center border-round-lg"
+              >
+                <i class="pi pi-external-link mr-2"></i>
+                View Certificate
+              </a>
+            </div>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</div>

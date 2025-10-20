@@ -1,0 +1,24 @@
+<div class="services-container surface-0 p-6">
+  <h2 class="text-3xl font-bold text-primary text-center mb-5">
+    Offered Services
+  </h2>
+
+  <div class="grid">
+    @for (service of services; track $index) {
+    <div class="col-12 md:col-6 lg:col-3">
+      <div
+        class="service-card border-round-lg surface-card shadow-1 p-5 flex flex-column align-items-center text-center"
+      >
+        <i
+          class="{{ service.icon }}"
+          [ngStyle]="{ color: '#0d6efd', fontSize: '2.5rem' }"
+        ></i>
+        <h3 class="text-xl font-semibold mt-3 mb-2">
+          {{ service.title }}
+        </h3>
+        <p class="text-gray-700 text-sm">{{ service.description }}</p>
+      </div>
+    </div>
+    }
+  </div>
+</div>

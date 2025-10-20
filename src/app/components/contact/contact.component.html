@@ -1,0 +1,22 @@
+<div class="contact-container surface-0 p-6 text-center">
+  <h2 class="text-3xl font-bold text-primary mb-5">Contact Me</h2>
+
+  <div class="contact-grid">
+    @for (contact of contacts; track $index) {
+    <div class="contact-card surface-card shadow-2 border-round-lg p-4">
+      <i [class]="contact.icon" class="contact-icon mb-3"></i>
+      <h4 class="text-xl font-semibold mb-2">{{ contact.platform }}</h4>
+
+      <a
+        [href]="contact.link"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="contact-button"
+      >
+        <i [class]="contact.icon"></i>
+        {{ contact.buttonText }}
+      </a>
+    </div>
+    }
+  </div>
+</div>

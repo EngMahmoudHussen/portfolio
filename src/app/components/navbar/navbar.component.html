@@ -1,0 +1,33 @@
+<nav [class.scrolled]="isScrolled" class="navbar surface-card shadow-1">
+  <div
+    class="container flex justify-content-between align-items-center py-3 px-4"
+  >
+    <div class="logo text-primary font-bold text-2xl cursor-pointer">
+      MHussen <span class="text-black">Angular Developer</span>
+    </div>
+
+    <button class="menu-btn md:hidden" (click)="toggleMenu()">
+      <i
+        class="fas"
+        [class.fa-bars]="!menuOpen"
+        [class.fa-times]="menuOpen"
+      ></i>
+    </button>
+
+    <div class="overlay" [class.show]="menuOpen" (click)="toggleMenu()"></div>
+    <ul
+      class="nav-links flex gap-4 list-none m-0 p-0 font-medium"
+      [class.open]="menuOpen"
+    >
+      <li><a (click)="scrollToSection('cover')">Home</a></li>
+      <li><a (click)="scrollToSection('about')">About</a></li>
+      <li><a (click)="scrollToSection('education')">Education</a></li>
+      <li><a (click)="scrollToSection('courses')">Courses</a></li>
+      <li><a (click)="scrollToSection('experience')">Experience</a></li>
+      <li><a (click)="scrollToSection('skills')">Skills</a></li>
+      <li><a (click)="scrollToSection('projects')">Projects</a></li>
+      <!-- <li><a style="display: none;" (click)="scrollToSection('achievements')">Achievements</a></li> -->
+      <li><a (click)="scrollToSection('contact')">Contact</a></li>
+    </ul>
+  </div>
+</nav>

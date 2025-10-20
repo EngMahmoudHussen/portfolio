@@ -1,0 +1,19 @@
+<div class="skills-container surface-0 p-6">
+  <h2 class="text-3xl font-bold text-primary text-center mb-5">Skills</h2>
+
+  <div class="grid text-center">
+    @for (skill of skills; track $index) {
+    <div class="col-6 md:col-3">
+      <div
+        class="skill-card border-round-lg surface-card shadow-1 p-4 mb-4 flex flex-column align-items-center justify-content-center gap-3"
+      >
+        <i
+          class="{{ skill.icon }}"
+          [ngStyle]="{ color: skill.color, fontSize: '2.5rem' }"
+        ></i>
+        <span class="font-medium text-lg text-color">{{ skill.name }}</span>
+      </div>
+    </div>
+    }
+  </div>
+</div>

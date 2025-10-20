@@ -1,0 +1,19 @@
+.education-container {
+  padding: 4rem 2rem;
+}
+
+.surface-card {
+  transition: transform 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.surface-card:hover {
+  transform: translateY(-5px);
+}
+
+.education-text {
+  flex-grow: 1;
+}

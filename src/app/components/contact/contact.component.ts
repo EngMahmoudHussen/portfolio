@@ -31,7 +31,7 @@ export class ContactComponent {
   {
     platform: 'WhatsApp',
     icon: 'fab fa-whatsapp',
-    link: 'https://wa.me/201014770108',
+    link: 'https://wa.me/01097955792',
     buttonText: 'Chat on WhatsApp',
   },
 ];
